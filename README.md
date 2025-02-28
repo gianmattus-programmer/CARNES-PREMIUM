@@ -32,7 +32,7 @@ Un portal web moderno y elegante para la venta de carnes premium, desarrollado c
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/gianmattus-programmer/premium-carnes-portal.git
+git clone https://github.com/gianmattus-programmer/CARNES-PREMIUM.git
 ```
 
 2. Instalar dependencias:
