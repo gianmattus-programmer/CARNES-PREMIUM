@@ -1,0 +1,160 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 33% 99%;
+    --foreground: 20 12% 9%;
+
+    --card: 42 33% 99%;
+    --card-foreground: 20 12% 9%;
+
+    --popover: 42 33% 99%;
+    --popover-foreground: 20 12% 9%;
+
+    --primary: 354 100% 25%;
+    --primary-foreground: 42 33% 99%;
+
+    --secondary: 30 40% 67%;
+    --secondary-foreground: 20 12% 9%;
+
+    --muted: 30 10% 95%;
+    --muted-foreground: 20 5% 45%;
+
+    --accent: 30 40% 67%;
+    --accent-foreground: 20 12% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 42 33% 99%;
+
+    --border: 30 10% 90%;
+    --input: 30 10% 90%;
+    --ring: 354 100% 25%;
+
+    --radius: 0.4rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 12% 9%;
+    --foreground: 42 33% 99%;
+
+    --card: 20 12% 9%;
+    --card-foreground: 42 33% 99%;
+
+    --popover: 20 12% 9%;
+    --popover-foreground: 42 33% 99%;
+
+    --primary: 354 100% 25%;
+    --primary-foreground: 42 33% 99%;
+
+    --secondary: 30 40% 67%;
+    --secondary-foreground: 20 12% 9%;
+
+    --muted: 20 8% 20%;
+    --muted-foreground: 30 10% 70%;
+
+    --accent: 30 40% 67%;
+    --accent-foreground: 20 12% 9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 42 33% 99%;
+
+    --border: 20 8% 20%;
+    --input: 20 8% 20%;
+    --ring: 354 100% 25%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .premium-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .premium-image {
+    @apply relative overflow-hidden rounded-sm;
+  }
+
+  .premium-image img {
+    @apply w-full h-full object-cover premium-transition;
+  }
+
+  .premium-button {
+    @apply inline-flex items-center px-6 py-3 bg-butcher-burgundy text-white rounded-sm
+    hover:bg-opacity-90 premium-transition font-medium tracking-wide text-sm;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center px-6 py-3 bg-transparent border border-butcher-dark
+    text-butcher-dark rounded-sm hover:bg-butcher-dark hover:text-white premium-transition
+    font-medium tracking-wide text-sm;
+  }
+
+  .underline-link {
+    @apply relative inline-block font-medium;
+  }
+
+  .underline-link::after {
+    @apply content-[''] absolute w-0 h-0.5 bg-butcher-burgundy bottom-0 left-0 premium-transition;
+  }
+
+  .underline-link:hover::after {
+    @apply w-full;
+  }
+
+  .container-fluid {
+    @apply w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .premium-card {
+    @apply bg-white rounded-sm shadow-sm overflow-hidden premium-transition hover:shadow-md;
+  }
+
+  .reveal-on-scroll {
+    @apply opacity-0;
+  }
+}
